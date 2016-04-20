@@ -9,10 +9,11 @@
     {% endif %}
 </head>
 <body>
-<h1>{{post.username}}</h1>
-<h2>{{post.usersex}}</h2>
-<h3>{{post.commint}}</h3>
-
-
+{% for posts in post %}
+<p>{{posts.username}} sex : {{posts.usersex}} syas: {{posts.commint}}</p>
+{% endfor %}
+<h2>{{post.username}}</h2>
+<h3>{{post.usersex}}</h3>
+<h4>{{post.commint}}</h4>
 </body>
 </html>
