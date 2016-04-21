@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title%}
-    <title>{{title}}-FLASK</title>
-    {% else %}
-    <title>welcome to FLASK</title>
-    {% endif %}
-</head>
+{% extends "base.html" %}
+{% block content %}
 <body>
 {% for posts in post %}
 <p>{{posts.username}} sex : {{posts.usersex}} syas: {{posts.commint}}</p>
@@ -16,4 +8,4 @@
 <h3>{{post.usersex}}</h3>
 <h4>{{post.commint}}</h4>
 </body>
-</html>
+{% endblock %}
