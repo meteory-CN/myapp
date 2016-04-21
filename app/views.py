@@ -18,6 +18,9 @@ def index():
                            title=title)
 
 
-@app.route('/login')
+@app.route('/login',methods=['GET','POST'])
 def login():
-    form = Loginform()
+    form = LoginForm()
+    return render_template('login.html',
+                           title = u"史俊",
+                           form =form)
